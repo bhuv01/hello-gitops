@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: hello-nodejs
+  namespace: hello
 spec:
   replicas: 2
   selector:
@@ -14,7 +15,7 @@ spec:
     spec:
       containers:
         - name: hello-nodejs
-          image: manneykapoor/hello-nodejs:latest
-          imagePullPolicy: Always
+          image: manneykapoor/hello-nodejs:initial
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
