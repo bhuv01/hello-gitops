@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: hello-nodejs
-          image: manneykapoor/hello-nodejs:2f8f015
+          image: manneykapoor/hello-nodejs:d595078
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 3000
